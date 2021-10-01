@@ -1,12 +1,24 @@
 <div class="container">
     <div class="row">
+        <div class="col-12">
+            Viagem & Gastronomia
+        </div>
+    </div>
+    <div class="row">
         <ng-template ngFor let-news [ngForOf]="newsList">
             <div class="col-3">
                 <div class="card text-left">
-                    <img class="card-img-top" src="{{news.imageUrl}}" alt="">
+                    <img class="card-img-top" src="{{news.image}}" alt="">
                     <div class="card-body">
-                        <h4 class="card-title">{{news.title}}</h4>
+                        <h4 class="card-title">
+                            <a routerLink="/news/{{news._id}}" class="edit">
+                                {{news.title}}                
+                            </a>
+                        </h4>
                         <p class="card-text">{{news.subtitle}}</p>
+                        <span *ngFor="let category of news.categories" class="badge badge-pill badge-primary">
+                            {{category.name}}
+                        </span>
                     </div>
                 </div>
             </div>

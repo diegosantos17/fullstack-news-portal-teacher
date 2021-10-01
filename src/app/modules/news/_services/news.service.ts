@@ -17,4 +17,9 @@ export class NewsService {
   getAll(): Observable<BaseResponse<News[]>> {
     return this.http.get<BaseResponse<News[]>>(this.baseUrl);
   }
+
+  getById(id: string): Observable<BaseResponse<News>> {
+    return this.http.get<BaseResponse<News>>(`${this.baseUrl}${id}`);
+  }
 }
+

@@ -1,8 +1,9 @@
-// import { Profile } from "./profile.model";
+import { Category } from "./category.model";
 
 export interface News {
     _id: string;
     title: string;
     subtitle: string;
-    imageUrl: string;
+    image: string;
+    categories: Category[]
 }
