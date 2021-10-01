@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  urlApi: 'https://t2s-fullstack-api.herokuapp.com/'
+  urlApi: 'https://fullstack-news-api.herokuapp.com/'
 };
