@@ -15,7 +15,6 @@ export class NewsService {
   constructor(private http: HttpClient) { }
 
   getAll(): Observable<BaseResponse<News[]>> {
-    const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNTBlMWJhN2JiYWQ0NjU1ODE5ZGVlOSIsImZ1bGxuYW1lIjoiRGllZ28gU2FudG9zIFJvZHJpZ3VlcyIsInByb2ZpbGUiOnsiX2lkIjoiNjE1MGUxNjk3YmJhZDQ2NTU4MTlkZWRkIn0sImlhdCI6MTYzMzA0NTM3MSwiZXhwIjoxNjMzMDQ1OTcxfQ.y15QLgxPufjPGtiTHivndu-rA2SVShhfY6n-fmyYXw0';
-    return this.http.get<BaseResponse<News[]>>(this.baseUrl, { headers: { 'x-access-token': token }});
+    return this.http.get<BaseResponse<News[]>>(this.baseUrl);
   }
 }

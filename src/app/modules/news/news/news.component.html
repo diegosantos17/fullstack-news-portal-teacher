@@ -1,3 +1,15 @@
-<p>news works!</p>
-
-{{newsList}}
+<div class="container">
+    <div class="row">
+        <ng-template ngFor let-news [ngForOf]="newsList">
+            <div class="col-3">
+                <div class="card text-left">
+                    <img class="card-img-top" src="{{news.imageUrl}}" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">{{news.title}}</h4>
+                        <p class="card-text">{{news.subtitle}}</p>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+    </div>
+</div>
